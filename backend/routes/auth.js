@@ -1,0 +1,33 @@
+const express = require('express')
+
+const router = express.Router()
+
+const {getAll, addCustomer, getID, addArt, updateArtist, getArtistWithId, getAllArtists, getAllArt, checkOut, updateArt, deleteArtist, getArtWithId, login, deleteArt, adminLogin, getId1, getId2, getId3, getId4, getId5, getId6, getId7, getId8, addArtist, getEvents} = require('../controllers/auth')
+
+
+router.get('/all', getAll)
+router.get('/api/getArt/:id', getArtWithId)
+router.get('/api/getArtist/:id', getArtistWithId)
+router.post('/api/addCustomer', addCustomer)
+router.post('/api/login', login)
+router.post('/api/admin/login', adminLogin)
+router.post('/api/art/upload', addArt)
+router.get('/api/allArt', getAllArt)
+router.get('/api/allArtists', getAllArtists)
+router.post('/api/checkout', checkOut)
+router.get('/api/products/1', getId1)
+router.get('/api/products/2', getId2)
+router.get('/api/products/3', getId3)
+router.get('/api/products/4', getId4)
+router.get('/api/products/5', getId5)
+router.get('/api/products/6', getId6)
+router.get('/api/products/7', getId7)
+router.get('/api/products/8', getId8)
+router.get('/api/events', getEvents)
+router.put('/api/updateArt/:id', updateArt)
+router.post('/api/artist/upload', addArtist) 
+router.get('/getID', getID)
+router.delete('/api/deleteArt/:id', deleteArt)
+router.delete('/api/artist/delete/:id', deleteArtist)
+router.put('/api/updateArtist/:id', updateArtist)
+module.exports = router
